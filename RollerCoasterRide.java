@@ -111,7 +111,7 @@ public class RollerCoasterRide extends JFrame {
 						a = 1/0;
 					}
 					else if(backTrouble == 121 || heartTrouble == 121 || height<=122 || height>=188) {
-						textFieldOutput.setText("Sorry, it is not safe for you to ride this roller coaster");
+						textFieldOutput.setText("Sorry, it is not safe for you to ride this roller coaster.");
 					}
 					else if(height>122 && height<188 && (int)backTrouble== 110 && (int)heartTrouble== 110) {
 						textFieldOutput.setText("It is OK for you to ride this roller coaster. Have fun!");
