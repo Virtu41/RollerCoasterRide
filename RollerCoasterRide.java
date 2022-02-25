@@ -97,6 +97,7 @@ public class RollerCoasterRide extends JFrame {
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
+					
 					//initialize variables
 					String heightS, backS, heartS;
 					int a;
@@ -107,13 +108,23 @@ public class RollerCoasterRide extends JFrame {
 					height = Double.parseDouble(heightS);
 					char backTrouble = backS.charAt(0);
 					char heartTrouble = heartS.charAt(0);
+					
+					//checks for negative height
 					if(height<0) {
 						a = 1/0;
 					}
-					else if(backTrouble == 121 || heartTrouble == 121 || height<=122 || height>=188) {
+					
+					//checks for heart, back problems and height that is outside the range.
+					else if((int)backTrouble == 121 || (int)heartTrouble == 121 || height<=122 || height>=188) {
+						
+						//output
 						textFieldOutput.setText("Sorry, it is not safe for you to ride this roller coaster.");
 					}
+					
+					//checks for heart, back problems and height within range
 					else if(height>122 && height<188 && (int)backTrouble== 110 && (int)heartTrouble== 110) {
+						
+						//output
 						textFieldOutput.setText("It is OK for you to ride this roller coaster. Have fun!");
 					}
 					else {
@@ -121,6 +132,8 @@ public class RollerCoasterRide extends JFrame {
 					}
 				}
 				catch(Exception err) {
+					
+					//error output
 					textFieldOutput.setText("Please use proper input.");
 				}
 			}
