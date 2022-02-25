@@ -97,6 +97,7 @@ public class RollerCoasterRide extends JFrame {
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
+					//initialize variables
 					String heightS, backS, heartS;
 					int a;
 					double height;
