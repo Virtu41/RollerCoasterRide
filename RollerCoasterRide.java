@@ -128,6 +128,7 @@ public class RollerCoasterRide extends JFrame {
 						textFieldOutput.setText("It is OK for you to ride this roller coaster. Have fun!");
 					}
 					else {
+						//error
 						a = 1/0;
 					}
 				}
